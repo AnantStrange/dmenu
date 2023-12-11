@@ -1039,13 +1039,13 @@ read_Xresources(void) {
 			colors[SchemeSel][ColFg] = strdup(xval.addr);
 			colors[SchemeOut][ColFg] = strdup(xval.addr);
 		}
-		if (XrmGetResource(xdb, "*.color0", "*", &type, &xval) == True){  /* normal foreground color */
+		if (XrmGetResource(xdb, "*.color66", "*", &type, &xval) == True){  /* normal foreground color */
 			colors[SchemeNorm][ColBg] = strdup(xval.addr);
 			colors[SchemeNormHighlight][ColBg] = strdup(xval.addr);
 		}
 		if (XrmGetResource(xdb, "*.color9", "*", &type, &xval) == True){  /* selected background color */
-			colors[SchemeSel][ColBg] = strdup(xval.addr);
 			colors[SchemeSelHighlight][ColBg] = strdup(xval.addr);
+			colors[SchemeSel][ColBg] = strdup(xval.addr);
 		}
 		if (XrmGetResource(xdb, "*.color6", "*", &type, &xval) == True)  /* selected foreground color */
 			colors[SchemeOut][ColBg] = strdup(xval.addr);
